@@ -35,10 +35,24 @@
   -webkit-animation-iteration-count: 1;
 }
 
-.editor.editor-colors {
-  &.gutter,
-  &.scroll-view,
-  &.vertical-scrollbar {
-    -webkit-transition: transform3d(0,0,0);
+
+.item-views {
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+.item-views {
+  & .editor.editor-colors,
+  & .gutter,
+  & .gutter > .line-numbers,
+  & .gutter .line-number,
+  & .scroll-view,
+  & .vertical-scrollbar,
+  & .overlayer,
+  & .underlayer,
+  & .lines,
+  & .lines > .line,
+  & .cursor {
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
   }
 }
